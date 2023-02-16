@@ -1,1 +1,1 @@
-Run a file through the processor
+compile file
