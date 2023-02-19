@@ -1,1 +1,1 @@
-print characters except some
+print numbers
