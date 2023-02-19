@@ -1,1 +1,1 @@
-print whether negative or positive
+print last digit
