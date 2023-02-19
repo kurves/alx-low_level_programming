@@ -1,1 +1,1 @@
-print three digit combination
+print two two digit combination
