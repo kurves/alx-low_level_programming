@@ -1,1 +1,1 @@
-print digit combination
+print number combination
