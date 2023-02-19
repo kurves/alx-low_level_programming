@@ -1,1 +1,1 @@
-play alphabet game
+prnt capital and small letters
