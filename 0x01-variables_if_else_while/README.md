@@ -1,1 +1,1 @@
-print number combination
+print three digit combination
