@@ -18,6 +18,7 @@ int main(void)
 		putchar(n);
 	}
 	for (af = 'a'; af <= 'f'; af++)
+	{
 		putchar(af);
 	}
 	putchar('\n');
