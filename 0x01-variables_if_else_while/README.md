@@ -1,1 +1,1 @@
-prnt capital and small letters
+print characters except some
