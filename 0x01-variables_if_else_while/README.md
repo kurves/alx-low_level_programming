@@ -1,1 +1,1 @@
-print alphabets in reverse
+print hexadecimal values
