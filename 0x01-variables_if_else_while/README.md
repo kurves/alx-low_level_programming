@@ -1,1 +1,1 @@
-print numbers
+print alphabets in reverse
