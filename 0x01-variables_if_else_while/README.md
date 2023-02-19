@@ -1,1 +1,1 @@
-print hexadecimal values
+print digit combination
