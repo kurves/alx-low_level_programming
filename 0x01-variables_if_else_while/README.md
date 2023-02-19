@@ -1,1 +1,1 @@
-print last digit
+play alphabet game
