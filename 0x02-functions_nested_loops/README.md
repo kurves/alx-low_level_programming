@@ -1,1 +1,1 @@
-print wheteher lower or upper
+print upper or lower
