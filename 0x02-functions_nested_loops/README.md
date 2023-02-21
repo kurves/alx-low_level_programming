@@ -1,1 +1,1 @@
-print _printchar
+print alphabet
