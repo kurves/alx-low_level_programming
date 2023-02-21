@@ -1,1 +1,1 @@
-print alphabet 10x
+print wheteher lower or upper
