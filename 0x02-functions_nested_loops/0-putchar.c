@@ -1,5 +1,6 @@
-#include <main.h>
-
+#include <unistd.h>
+#include <stdio.h>
+#include "main.h"
 /**
  * main - Check description
  * Description: It prints the word _putchar, followed by a new line.
@@ -11,8 +12,8 @@ int main(void)
 	int i;
 
 	for (i = 0; i < 8; i++)
-		_putchar(word[i]);
-	_putchar('\n');
+		putchar(word[i]);
+	putchar('\n');
 
 	return (0);
 }
