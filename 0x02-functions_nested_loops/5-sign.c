@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_sign 
- * d: An input number
+ * print_sign - check code
+ * @d: An input number
  * Description: Tohis function prints the sign of the number
  * Return: 1 if number is positive, o if number is 0, or
  * -1 if number is negative
