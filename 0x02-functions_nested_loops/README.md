@@ -1,1 +1,1 @@
-first 50 fibonucci numbers
+sum of even valued fibonuci
