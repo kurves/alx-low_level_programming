@@ -1,1 +1,1 @@
-print 9 times table
+add integers
