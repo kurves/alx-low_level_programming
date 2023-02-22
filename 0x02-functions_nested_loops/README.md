@@ -1,1 +1,1 @@
-print number absolute
+print last digit of number
