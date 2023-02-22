@@ -1,1 +1,1 @@
-print to 98
+print natural numbers
