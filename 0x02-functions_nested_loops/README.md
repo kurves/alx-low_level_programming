@@ -1,1 +1,1 @@
-print last digit of number
+print time of day
