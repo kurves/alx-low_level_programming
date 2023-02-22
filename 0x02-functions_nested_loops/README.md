@@ -1,1 +1,1 @@
-print upper or lower
+print the sign of number
