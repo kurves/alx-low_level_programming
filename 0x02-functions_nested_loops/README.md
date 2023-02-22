@@ -1,1 +1,1 @@
-print time of day
+print 9 times table
