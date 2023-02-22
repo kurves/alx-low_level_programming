@@ -1,1 +1,1 @@
-print the sign of number
+print number absolute
