@@ -1,1 +1,1 @@
-sum of even valued fibonuci
+first 98 fibonucci numbers
