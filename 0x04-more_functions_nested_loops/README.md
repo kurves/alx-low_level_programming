@@ -1,1 +1,1 @@
-multiply two integers
+print numbers 0-9
