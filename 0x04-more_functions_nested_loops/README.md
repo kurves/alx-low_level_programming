@@ -1,1 +1,1 @@
-check whether character is upper or lower
+check for digit
