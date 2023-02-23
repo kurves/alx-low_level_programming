@@ -1,1 +1,1 @@
-print numbers 0-9
+print most numbers
