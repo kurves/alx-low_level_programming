@@ -1,1 +1,1 @@
-print most numbers
+fizz bizz
