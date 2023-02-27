@@ -1,1 +1,1 @@
-print content to stdout
+print string in reverse
