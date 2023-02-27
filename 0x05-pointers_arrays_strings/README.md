@@ -1,1 +1,1 @@
-print half string
+Print elements of an array
