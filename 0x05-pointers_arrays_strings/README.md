@@ -1,1 +1,1 @@
-find the string length
+print content to stdout
