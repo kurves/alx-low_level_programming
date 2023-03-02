@@ -1,1 +1,1 @@
-reverse the contents of an array
+Chang all lowercase to uppercase
