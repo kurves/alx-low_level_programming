@@ -1,1 +1,1 @@
-capitalize everyword of a sentence
+encode strings
