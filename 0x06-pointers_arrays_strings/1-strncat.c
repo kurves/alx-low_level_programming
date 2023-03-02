@@ -20,11 +20,11 @@ char *_strncat(char *dest, char *src, int n)
 	while (j < n && src[j])
 	{
 		dest[destlen] = src[j];
-		dlen++;
+		destlen++;
 		j++;
 	}
 
-	dest[dlen + n + 1] = '\0';
+	dest[destlen + n + 1] = '\0';
 
 	return (dest);
 }
