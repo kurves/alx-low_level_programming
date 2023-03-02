@@ -1,1 +1,1 @@
-Chang all lowercase to uppercase
+capitalize everyword of a sentence
