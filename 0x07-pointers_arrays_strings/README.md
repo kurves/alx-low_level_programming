@@ -1,1 +1,1 @@
-Function to locate character in string
+Function to find the length of a substring
