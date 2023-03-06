@@ -1,1 +1,1 @@
-function to find string with a set bytes
+function that locates a substring
