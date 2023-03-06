@@ -1,1 +1,1 @@
-Function to find the length of a substring
+function to find string with a set bytes
