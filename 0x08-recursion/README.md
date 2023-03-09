@@ -1,1 +1,1 @@
-Program that  checks if a number is a  prime number
+Program to check if a string is a palindrome
