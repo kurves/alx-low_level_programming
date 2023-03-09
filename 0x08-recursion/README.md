@@ -1,1 +1,1 @@
-Program that returns the natural sqaure root of a number
+Program that  checks if a number is a  prime number
