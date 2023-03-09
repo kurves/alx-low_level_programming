@@ -1,1 +1,1 @@
-A function that prints a string folowed by a new  line
+Print a string in reverse
