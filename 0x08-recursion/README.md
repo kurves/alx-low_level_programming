@@ -1,1 +1,1 @@
-Program that returns the a number raised by a number
+Program that returns the natural sqaure root of a number
