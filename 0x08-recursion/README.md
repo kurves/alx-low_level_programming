@@ -1,1 +1,1 @@
-Print a string in reverse
+Program that retturns the factorial of a number
