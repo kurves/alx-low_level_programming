@@ -1,1 +1,1 @@
-Program that concantenates two strings
+Program that returns a pointer to two dimensional array
