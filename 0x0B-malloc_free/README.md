@@ -1,1 +1,1 @@
-Program that frees memory previously allocated to a 2 it dimensional array
+Program that concantenates all arguments in a program
