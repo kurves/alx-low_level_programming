@@ -1,1 +1,1 @@
-Program that returns a pointer to two dimensional array
+Program that frees memory previously allocated to a 2 it dimensional array
