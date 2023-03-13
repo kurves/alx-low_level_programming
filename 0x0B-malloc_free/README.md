@@ -1,1 +1,1 @@
-Programs that returns a pointer to recently allocated memory
+Program that concantenates two strings
