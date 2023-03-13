@@ -1,1 +1,1 @@
-Program that creates an array of Characters
+Programs that returns a pointer to recently allocated memory
