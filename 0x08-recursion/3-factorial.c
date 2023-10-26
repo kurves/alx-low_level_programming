@@ -6,7 +6,7 @@
  * Description: A function that prints the factorial of a number recursively
  * Return: Integer value
  */
-int factorial(int n);
+int factorial(int n)
 {
 
 	if (n == 0 || n == 1)
