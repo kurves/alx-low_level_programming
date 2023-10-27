@@ -7,7 +7,7 @@
  * Description: A program to prints the arguments passed
  * Return: integer
  */
-int main(int argc , char **argv)
+int main(int argc, char **argv)
 {
 	printf("%d\n", argc);
 	return (0);
