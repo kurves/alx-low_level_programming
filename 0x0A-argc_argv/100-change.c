@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 	int coins[] = {25, 10, 5, 2}, amount,  no_of_coins = 0, total = 0;
 	unsigned long i;
 
-	if (argc !=2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 			if (amount >= coins[i])
 			{
 				int cents = amount / coins[i];
-				
+
 				no_of_coins +=  cents;
 				total = amount % coins[i];
 				amount = total;
