@@ -10,7 +10,8 @@
  */
 int main(int argc, char **argv)
 {
-	int i,  coins[] = {25, 10, 5, 2}, no_of_coins = 0, total = 0;
+	int coins[] = {25, 10, 5, 2}, amount,  no_of_coins = 0, total = 0;
+	unsigned long i;
 
 	if (argc !=2)
 	{
@@ -22,7 +23,7 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (0);
 	}
-	int amount = atoi(argv[1]);
+	amount = atoi(argv[1]);
 
 	while (amount > 1)
 	{
