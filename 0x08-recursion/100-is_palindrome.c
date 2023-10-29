@@ -1,7 +1,6 @@
 #include  "main.h"
 #include <stdio.h>
 #include <string.h>
-#include "main.c"
 /**
  * is_palindrome - a function that checks for a palindrome
  * @s: string
