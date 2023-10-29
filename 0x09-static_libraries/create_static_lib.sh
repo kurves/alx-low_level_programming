@@ -1,7 +1,7 @@
 #!/bin/bash
-files=$(grep -l '\.c$' *)
-for file in $files; do
+for file in *.c; do
   gcc -c "$file"
+  ar rcs liball.a "${file%.c}.o"
+  rm "${file%.c}.o"
 done
-ar rcs liball.a *.o
 echo
