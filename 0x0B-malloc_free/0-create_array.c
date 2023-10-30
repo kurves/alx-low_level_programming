@@ -10,17 +10,16 @@
  */
 char *create_array(unsigned int size,  char c)
 {
-
+	char *char_s;
+	char_s = malloc(sizeof(c) * size);
+	char_s[0] = 'K';
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	else if (size == NULL)
+	else if (char_s == NULL)
 	{
 		return (NULL);
 	}
-	char_s = malloc(sizeof(c) * size)
-	char_s[0] = 'K'
-	putchar(char_s);
 	return (0);
 }
