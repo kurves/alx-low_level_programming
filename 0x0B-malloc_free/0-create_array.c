@@ -13,7 +13,6 @@ char *create_array(unsigned int size,  char c)
 	char *char_s;
 
 	char_s = malloc(sizeof(c) * size);
-	char_s[0] = 'K';
 	if (size == 0)
 	{
 		return (NULL);
@@ -23,4 +22,5 @@ char *create_array(unsigned int size,  char c)
 		return (NULL);
 	}
 	return (0);
+	free(char_s);
 }
