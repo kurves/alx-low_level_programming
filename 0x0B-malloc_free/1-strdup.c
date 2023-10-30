@@ -1,4 +1,5 @@
 #include  "main.h"
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -9,20 +10,21 @@
  */
 char *_strdup(char *str)
 {
-	char *char_s;
-	unsigned int i;
+	int len_str;
+	char *str_dup;
 
-	if (size == 0)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
 	len_str = strlen(str);
-	str_dup = malloc(sizeof(str) * (len_str + 1);
+
+	str_dup = (char *)malloc(len_str + 1);
 
 	if (str_dup == NULL)
 	{
 		return (NULL);
 	}
 	return (str_dup);
-	free(strr_s);
+	free(str_dup);
 }
