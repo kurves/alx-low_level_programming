@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	{
 		sum += strlen(av[i]);
 	}
-	concat_str = (char *)malloc(sum * ac);
+	concat_str = (char *)malloc(sum + ac);
 	if (concat_str == NULL)
 	{
 		return (NULL);
@@ -40,6 +40,7 @@ char *argstostr(int ac, char **av)
 			concat_str[j++] = '\n';
 		}
 	}
+	concat_str[j++] = '\n';
 	return (concat_str);
 	free(concat_str);
 }
