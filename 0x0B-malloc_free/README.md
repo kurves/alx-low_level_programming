@@ -4,3 +4,4 @@
 ### A function that concantenates two strings
 ### Function that returns a  pointer to two dimensional array
 ### Function to free up a grid
+### Program that concantenates all the arguments
