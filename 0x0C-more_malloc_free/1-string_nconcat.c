@@ -35,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	strcpy(concat_str, s1);
-	strcat(concat_str, s2, n);
+	strncat(concat_str, s2, n);
 	return (concat_str);
 	free(concat_str);
 }
