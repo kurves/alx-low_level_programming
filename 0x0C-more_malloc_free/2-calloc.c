@@ -27,9 +27,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	if (char_s != NULL) 
-	{		
-		memset(char_s, 0, (nmemb * size));	
+	if (char_s != NULL)
+	{
+		memset(char_s, 0, (nmemb * size));
 	}
 	return (char_s);
 	free(char_s);
