@@ -9,7 +9,6 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	
 	void *intb = malloc(sizeof(b));
 
 	if (intb == NULL)
