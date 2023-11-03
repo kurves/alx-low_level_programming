@@ -40,6 +40,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 	memcpy(new_char_s, ptr, char_s);
-	return (new_char_s);
 	free(ptr);
+	return (new_char_s);
 }
