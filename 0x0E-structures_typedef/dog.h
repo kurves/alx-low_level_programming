@@ -1,5 +1,5 @@
 /**
- * dog - dog struct
+ * struct dog - dog struct
  * @name: name of dog
  * @age: age of dog
  * @owner: name of dog
