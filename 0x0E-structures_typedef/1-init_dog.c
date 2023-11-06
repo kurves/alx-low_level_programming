@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+#include "dog.h"
 /**
  * struct dog - dog struct
  * @name: name of dog
@@ -6,17 +9,12 @@
  *
  * Description: struct of a dog
  */
-struct dog *d(char *name, float age, char *owner)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	struct dog *d;
-
-	d = malloc(sizeof(struct dog));
-	if (d == NULL)
+	if (d != NULL)
 	{
-		return (NULL);
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
 	}
-	d->name = name;
-	d->age = age;
-	d->owner = owner
-	return (d);
 }
