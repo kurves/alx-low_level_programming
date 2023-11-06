@@ -5,11 +5,8 @@
 /**
  * print_dog - function o print struct dog
  * @d: pointer
- * @name: name of dog
- * @age: age of dog
- * @owner: name of dog
- * Return: nothin
  * Description: struct of a dog
+ * Return: Nothing
  */
 void print_dog(struct dog *d)
 {
