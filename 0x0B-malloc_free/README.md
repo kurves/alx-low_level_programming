@@ -5,3 +5,4 @@
 ### Function that returns a  pointer to two dimensional array
 ### Function to free up a grid
 ### Program that concantenates all the arguments
+### A function that splits a string into words
