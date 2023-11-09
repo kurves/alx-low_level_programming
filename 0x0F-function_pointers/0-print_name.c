@@ -5,7 +5,7 @@
 /**
  * print_name - function that prints a name
  * @name: name
- * @PrintName: function printer
+ * @printer: function printer
  * Description: function that prints a name
  * Return: Nothing
  */
