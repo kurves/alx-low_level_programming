@@ -26,5 +26,5 @@ int main(int argc, char *argv[])
 	res = action(a, b);
 	printf("%d\n", res);
 
-	return 0;
+	return (0);
 }
