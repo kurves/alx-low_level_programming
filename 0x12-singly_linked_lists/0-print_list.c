@@ -11,8 +11,9 @@
  */
 size_t print_list(const list_t *h)
 {
-	long unsigned int len;
-	len = 0;
+	size_t c_count;
+
+	c_count = 0;
 	while (h != NULL)
 	{
 		if (h->str == NULL)
@@ -21,10 +22,10 @@ size_t print_list(const list_t *h)
 	}
 	else
 	{
-		printf("[%lu] %s\n", len, h->str);
+		printf("[%lu] %s\n", c_count, h->str);
 	}
 	h = h->next;
-	len++;
+	c_count++;
 	}
-	return (len);
+	return (c_count);
 }
