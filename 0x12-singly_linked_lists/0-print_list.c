@@ -11,21 +11,26 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t c_count;
+	size_t c_count, word_length;
 
 	c_count = 0;
+	word_length = 0;
 	while (h != NULL)
 	{
 		if (h->str == NULL)
 		{
 			printf("[0] (nil)\n");
-	}
-	else
-	{
-		printf("[%lu] %s\n", c_count, h->str);
-	}
-	h = h->next;
-	c_count++;
+		}
+		else
+		{
+			while (h->str[word_length] != '\0')
+			{
+				word_length++;
+			}
+			printf("[%lu] %s\n", word_length, h->str);
+		}
+		h = h->next;
+		c_count++;
 	}
 	return (c_count);
 }
