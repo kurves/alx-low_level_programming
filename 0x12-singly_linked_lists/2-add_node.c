@@ -13,6 +13,9 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
+	size_t word_length;
+
+	word_length = 0;
 
 	if (str == NULL)
 	{
@@ -30,7 +33,12 @@ list_t *add_node(list_t **head, const char *str)
 		free(new_node);
 		return (NULL);
 	}
+	while (str[word_length] != '\0')
+	{
+		word_length++;
+	}
 	new_node->next = *head;
 	*head = new_node;
+	printf("[%lu] %s\n", word_length, str);
 	return (new_node);
 }
