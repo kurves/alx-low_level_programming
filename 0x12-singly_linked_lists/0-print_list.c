@@ -23,7 +23,7 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			word_length = strlen(h->str);	
+			word_length = strlen(h->str);
 			printf("[%lu] %s\n", word_length, h->str);
 		}
 		h = h->next;
