@@ -3,3 +3,7 @@
 ### function that returns the number of elements in a linked listint_t list
 ### function that adds a new node at the beginning of a listint_t list
 ###  function that adds a new node at the end of a listint_t list
+### function that frees a listint_t list.
+### Function that deletes the head of list
+### Function to get element of list at nth index
+Function to sum all elememts of a node
