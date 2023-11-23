@@ -2,3 +2,4 @@
 ### function that prints the binary representation of a number
 ### function that returns the value of a bit at a given index
 ### function that sets the value of a bit to 1 at a given index.
+### Write a function that sets the value of a bit to 0 at a given index.
