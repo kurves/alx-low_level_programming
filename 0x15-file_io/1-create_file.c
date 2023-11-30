@@ -21,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	fileopen = open(filename, O_WRONLY | O_CREAT | O_TRUNC);
+	fileopen = open(filename, O_WRONLY | O_CREAT | O_TRUNC | S_IRUSR | S_IWUSR);
 
 	if (fileopen == -1)
 	{
@@ -36,7 +36,6 @@ int create_file(const char *filename, char *text_content)
 			return (-1);
 		}
 	}
-	fchmod(fileopen, S_IRUSR | S_IWUSR);
 	close(fileopen);
 	return (1);
 }
