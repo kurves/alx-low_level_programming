@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * add_node - funtion to add a node
+ * add_dnodeint - funtion to add a node
  * @head: start of list
- * @str: string character
+ * @n: number
  * Description: function that adds a node to list
  * Return: list_t value
  */
