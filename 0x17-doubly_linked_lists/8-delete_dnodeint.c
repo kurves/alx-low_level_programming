@@ -6,7 +6,7 @@
 /**
  * delete_dnodeint_at_index - funtion to deletes a node
  * @head: start of listi
- * index: index
+ * @index: index
  * Description: function that deletes a node to list
  * Return:integer
  */
@@ -34,22 +34,22 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (0);
 	}
 	while (current != NULL)
-       	{
-       		if (count == index) 
-            	{
-			if (current->prev != NULL) 
+	{
+		if (count == index)
+		{
+			if (current->prev != NULL)
 			{
-		                current->prev->next = current->next;
-            		}
-		        if (current->next != NULL) 
+				current->prev->next = current->next;
+			}
+			if (current->next != NULL)
 			{
-		                current->next->prev = current->prev;
-            		}
-		        free(current);
-	           	 return 1;
-        	}
-        	count++;
-	        current = current->next;
+				current->next->prev = current->prev;
+			}
+			free(current);
+			return (1);
+		}
+		count++;
+		current = current->next;
 	}
-    	return -1;
+	return (-1);
 }
