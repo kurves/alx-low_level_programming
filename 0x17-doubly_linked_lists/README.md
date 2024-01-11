@@ -6,3 +6,4 @@
 ### Program that free a double linked list
 ### Program to get node at index
 ### Program that adds elements in a list
+### Program that deletes element at index
