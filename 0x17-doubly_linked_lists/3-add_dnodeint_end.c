@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * add_node - funtion to add a node
+ * add_dnodeint_end - funtion to add a node
  * @head: start of list
- * @str: string character
+ * @n: number
  * Description: function that adds a node to list
  * Return: list_t value
  */
@@ -26,16 +26,15 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	if (*head == NULL)
 	{
 		new_node->prev = NULL;
-	        *head = new_node;
-        	return new_node;
+		*head = new_node;
+		return (new_node);
 	}
-       	last = *head;
-
-	while (last->next != NULL) 
+	last = *head;
+	while (last->next != NULL)
 	{
 		last = last->next;
 	}
 	last->next = new_node;
-    	new_node->prev = last;
+	new_node->prev = last;
 	return (new_node);
 }
