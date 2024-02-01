@@ -7,3 +7,4 @@
 ## FILE I/O
 ## Doubly linked Lists
 ## Dynamic and Static Libraries in C
+## 0x1A. C - Hash tables
