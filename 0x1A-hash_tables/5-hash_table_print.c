@@ -12,15 +12,15 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
+	int printed_table;
+        unsigned long int i;
+
 	if (ht == NULL)
 	{
 		return;
 	}
 	printf("{");
-	
-	int printed_table = 0;
-	unsigned long int i;
-	
+	printed_table = 0;
 	for (i = 0; i < ht->size; i++)
 	{
 		hash_node_t *current = ht->array[i];
@@ -35,4 +35,6 @@ void hash_table_print(const hash_table_t *ht)
 			}
 		}
 		printf("}\n");
+
+	}
 }
