@@ -19,26 +19,32 @@ void copy_file(const char *file_from, const char *file_to) {
     fd_from = open(file_from, O_RDONLY);
     if (fd_from == -1)
     {
-        error_exit("Error: Can't read from file %filename",file_from 98);
+    	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+        exit(98);
     }
     fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (fd_to == -1)
     {
-        error_exit("Error: Can't write to file %filename",file_to 99);
+    	 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+        exit(99);
     }
     while ((bytes_read = read(fd_from, buf, BUF_SIZE)) > 0) 
     {
         bytes_written = write(fd_to, buf, bytes_read);
         if (bytes_written == -1)
-            error_exit("Error: Can't write to file", 99);
-    }
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to file\n");
+            exit(99);
+	}
+}
     if (bytes_read == -1)
     {
-        error_exit("Error: Can't read from file", 98);
+    	dprintf(STDERR_FILENO, "Error: Can't read from file\n");
+        exit(98);
     }
     if (close(fd_from) == -1 || close(fd_to) == -1)
     {
-	    error_exit("Error: Can't close file descriptor", 100);
-
+	  dprintf(STDERR_FILENO, "Error: Can't close file descriptor\n");
+        exit(100);
     }
 }
