@@ -5,6 +5,8 @@
 #include <fcntl.h>
 #include <string.h>
 
+#define BUFFER_SIZE 1024
+
 /**
  * copy_file_contents - function to copy fike
  * @file_from: file to copy from
@@ -29,7 +31,7 @@ void copy_file_contents(const char *file_from, const char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 		exit(99);
 	}
-	while ((bytes_read = read(fd_from, buf, BUF_SIZE)) > 0)
+	while ((bytes_read = read(fd_from, buf, BUFFER_SIZE)) > 0)
 	{
 		bytes_written = write(fd_to, buf, bytes_read);
 		if (bytes_written == -1)
