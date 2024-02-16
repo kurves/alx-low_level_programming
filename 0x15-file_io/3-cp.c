@@ -19,12 +19,12 @@ void copy_file(const char *file_from, const char *file_to) {
     fd_from = open(file_from, O_RDONLY);
     if (fd_from == -1)
     {
-        error_exit("Error: Can't read from file", 98);
+        error_exit("Error: Can't read from file %filename",file_from 98);
     }
     fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (fd_to == -1)
     {
-        error_exit("Error: Can't write to file", 99);
+        error_exit("Error: Can't write to file %filename",file_to 99);
     }
     while ((bytes_read = read(fd_from, buf, BUF_SIZE)) > 0) 
     {
