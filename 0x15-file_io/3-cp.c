@@ -51,3 +51,17 @@ void copy_file_contents(const char *file_from, const char *file_to)
 		exit(100);
 	}
 }
+/**
+ * error_exit - function to print error message
+ * @msg: message to print
+ * @exit_code: error code
+ * Description: funtion to stop program
+ * Return: nothin
+ */
+
+void error_exit(const char *msg, int exit_code)
+{
+	dprintf(STDERR_FILENO, "%s\n", msg);
+	exit(exit_code);
+}
+
