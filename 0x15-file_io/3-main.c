@@ -8,7 +8,7 @@
 
 
 /**
- * main- main enrty point
+ * main - main enrty point
  * @argc: number of arguments
  * @argv: array of arguments
  * description: main entry function
@@ -24,6 +24,6 @@ int main(int argc, char *argv[])
         const char *file_from = argv[1];
         const char *file_to = argv[2];
 
-        copy_file(file_from, file_to);
+        copy_file_contents(file_from, file_to);
         return (0);
 }
