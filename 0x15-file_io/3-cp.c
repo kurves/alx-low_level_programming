@@ -84,5 +84,5 @@ int main(int ac, char **av)
         }
         res = copy_file_contents(av[1], av[2]);
         printf("-> %i)\n", res);
-        return (0)
+        return (0);
 }
