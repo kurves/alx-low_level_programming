@@ -15,15 +15,16 @@
  * Return: integer
  */
 
-int main(int argc, char *argv[])
+int main(int ac, char **av)
 {
-        if (argc != 3)
-        {
-                error_exit("Usage: cp file_from file_to", 97);
-        }
-        const char *file_from = argv[1];
-        const char *file_to = argv[2];
-
-        copy_file_contents(file_from, file_to);
-        return (0);
+	int res;
+	
+	if (ac != 3)
+	{
+		dprintf(2, "Usage: %s filename text\n", av[0]);
+		exit(1);
+	}
+	res = copy_file_contents(av[1], av[2]);
+	printf("-> %i)\n", res);
+	return (0)
 }
