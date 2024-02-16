@@ -25,7 +25,7 @@ void copy_file_contents(const char *file_from, const char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
@@ -51,19 +51,6 @@ void copy_file_contents(const char *file_from, const char *file_to)
 		exit(100);
 	}
 }
-/**
- * error_exit - function to print error message
- * @msg: message to print
- * @exit_code: error code
- * Description: funtion to stop program
- * Return: nothin
- */
-
-void error_exit(const char *msg, int exit_code)
-{
-	dprintf(STDERR_FILENO, "%s\n", msg);
-	exit(exit_code);
-}
 
 /**
  * main - main enrty point
@@ -78,7 +65,7 @@ int main(int ac, char **av)
         if (ac != 3)
         {
                 dprintf(2, "Usage: %s filename text\n", av[0]);
-                exit(1);
+                exit(97);
         }
         copy_file_contents(av[1], av[2]);
         return (0);
