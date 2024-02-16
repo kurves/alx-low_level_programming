@@ -75,14 +75,11 @@ void error_exit(const char *msg, int exit_code)
 
 int main(int ac, char **av)
 {
-        int res;
-
         if (ac != 3)
         {
                 dprintf(2, "Usage: %s filename text\n", av[0]);
                 exit(1);
         }
-        res = copy_file_contents(av[1], av[2]);
-        printf("-> %i)\n", res);
+        copy_file_contents(av[1], av[2]);
         return (0);
 }
