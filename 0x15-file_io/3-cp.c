@@ -25,7 +25,7 @@ void copy_file_contents(const char *file_from, const char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fd_to = open(file_to, O_WRONLY | O_CREAT, 0664)
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
@@ -59,19 +59,19 @@ void copy_file_contents(const char *file_from, const char *file_to)
 
 /**
  * main - main enrty point
- * @argc: number of arguments
- * @argv: array of arguments
+ * @ac: number of arguments
+ * @av: array of arguments
  * description: main entry function
  * Return: integer
  */
 
 int main(int ac, char **av)
 {
-        if (ac != 3)
-        {
-                dprintf(2, "Usage: %s filename text\n", av[0]);
-                exit(97);
-        }
-        copy_file_contents(av[1], av[2]);
-        return (0);
+	if (ac != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		exit(97);
+	}
+	copy_file_contents(av[1], av[2]);
+	return (0);
 }
