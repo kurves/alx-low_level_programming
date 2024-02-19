@@ -19,6 +19,7 @@ void copy_file_contents(const char *file_from, const char *file_to)
 {
 	int fd_from, fd_to, bytes_read, bytes_written;
 	char buf[BUFFER_SIZE];
+	char *ptr;
 
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
@@ -35,14 +36,25 @@ void copy_file_contents(const char *file_from, const char *file_to)
 	}
 	while ((bytes_read = read(fd_from, buf, BUFFER_SIZE)) > 0)
 	{
-		bytes_written = write(fd_to, buf, bytes_read);
-		if (bytes_written == -1)
+		ptr = buf;
+		while (bytes_read > 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file\n");
-			close(fd_from);
-			close(fd_to);
-			exit(99);
+			bytes_written = write(fd_to, ptr, bytes_read);
+			if (bytes_written == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+				exit(99);
+			}
+			bytes_read -= bytes_written;
+			ptr += bytes_written;
 		}
+	}
+	if (bytes_written == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to file\n");
+		close(fd_from);
+		close(fd_to);
+		exit(99);
 	}
 	if (bytes_read == -1)
 	{
