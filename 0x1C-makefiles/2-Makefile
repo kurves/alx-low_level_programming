@@ -1,9 +1,9 @@
 CC = gcc
-SRC = school.c main.c
-OBJ = main.o
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
 NAME = school
 
-school: $(SRC)
+$(NAME): $(OBJ)
         $(CC) $(SRC) $(OBJ) -o school
 
 all: $(NAME)
