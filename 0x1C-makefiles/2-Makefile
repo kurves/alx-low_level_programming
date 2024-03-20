@@ -1,12 +1,10 @@
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = school.c main.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
 $(NAME): $(OBJ)
-	$(CC) $(SRC) $(OBJ) -o  $@
+	$(CC) $(OBJ) -o  $(NAME)
 
-%.o: %.c
-	$(CC) -c $< -o $@
 
 all: $(NAME)
