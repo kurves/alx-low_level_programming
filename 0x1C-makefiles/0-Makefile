@@ -1,4 +1,4 @@
-school: main.c
-	gcc -o school.c main.c
+school: main.c school.c
+	gcc school.c main.c -o school
 
 all: school
