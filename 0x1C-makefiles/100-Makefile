@@ -5,7 +5,7 @@ NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 $(NAME): $(OBJ) m.h
-	$(CC) gcc -Wall -Werror -Wextra -pedantic  $(OBJ) -o  $(NAME)
+	$(CC)  -Wall -Werror -Wextra -pedantic  $(OBJ) -o  $(NAME)
 
 
 all: $(NAME)
