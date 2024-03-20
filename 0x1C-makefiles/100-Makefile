@@ -3,6 +3,7 @@ SRC = school.c main.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
+RM = rm -f
 
 $(NAME): $(OBJ) m.h
 	$(CC)  -Wall -Werror -Wextra -pedantic  $(OBJ) -o  $(NAME)
@@ -11,10 +12,11 @@ $(NAME): $(OBJ) m.h
 all: $(NAME)
 
 clean:
-	@$(RM) -f *~ *.swp $(NAME)
+	$(RM) -f *~ *.swp $(NAME)
 
 oclean:
-	@find . -name '*.o' -delete -f
+	$(RM) $(OBJ)
+
 fclean: clean oclean
 
 re: fclean all
