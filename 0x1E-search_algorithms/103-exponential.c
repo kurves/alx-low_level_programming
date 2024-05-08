@@ -13,7 +13,7 @@
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t i;
-	size_t = low;
+	size_t low;
 	size_t high;
 	size_t mid;
 	size_t j;
@@ -44,21 +44,22 @@ int exponential_search(int *array, size_t size, int value)
 			if (j > low)
 			{
 				printf(", ");
-				printf("%d", array[j]);
 			}
-			printf("\n");
-			if (array[mid] == value)
-			{
-				return (mid);
-			}
-			if (array[mid] < value)
-			{
-				low = mid + 1;
-			}
-			else
-			{
-				high = mid - 1;
-			}
+			printf("%d", array[j]);
 		}
-		return -1;
+		printf("\n");
+		if (array[mid] == value)
+		{
+			return (mid);
+		}
+		if (array[mid] < value)
+		{
+			low = mid + 1;
+		}
+		else
+		{
+			high = mid - 1;
+		}
+	}
+	return (-1);
 }
