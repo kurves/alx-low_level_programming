@@ -12,19 +12,13 @@
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t low;
-	size_t high;
-	size_t mid;
-	size_t i;
-	
+	size_t low, i, mid, high;
+
 	low = 0;
 	high = size - 1;
 	mid = 0;
-	
 	if (array == NULL || size == 0)
-	{
 		return (-1);
-	}
 	while (low <= high)
 	{
 		printf("Searching in array: ");
