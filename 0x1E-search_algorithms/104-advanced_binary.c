@@ -28,31 +28,32 @@ int advanced_binary(int *array, size_t size, int value)
 	while (low <= high)
 	{
 		printf("Searching in array: ");
-        for (i = low; i <= high; i++)
-        {
-		if (i != low)
+		for (i = low; i <= high; i++)
 		{
-			printf(", ");
+			if (i != low)
+			{
+				printf(", ");
+			}
+			printf("%d", array[i]);
 		}
-		printf("%d", array[i]);
-	}
-	printf("\n");
-	mid = low + (high - low) / 2;
-	if (array[mid] == value)
-	{
-		if (mid == 0 || array[mid - 1] != value)
+		printf("\n");
+		mid = low + (high - low) / 2;
+		if (array[mid] == value)
 		{
-			return (mid);
+			if (mid == 0 || array[mid - 1] != value)
+			{
+				return (mid);
+			}
+			high = mid;
 		}
-		high = mid;
-	}
-	else if (array[mid] < value)
-	{
-		low = mid + 1;
-	}
-	else
-	{
-		high = mid;
+		else if (array[mid] < value)
+		{
+			low = mid + 1;
+		}
+		else
+		{
+			high = mid;
+		}
 	}
 	return (-1);
 }
