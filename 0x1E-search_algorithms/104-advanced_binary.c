@@ -24,18 +24,33 @@ int advanced_binary(int *array, size_t size, int value)
 	for (i = 0; i < size; i++)
 	{
 		printf("%d, ", array[i]);
+		if (i != size - 1)
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
 	if (array[mid] == value)
 	{
-		return (mid);
+		if (mid == 0 || array[mid - 1] != value)
+		{
+			return (mid);
+		}
 	}
-	else if (array[mid] > value)
+	if (array[mid] >= value)
 	{
-		return advanced_binary(array, mid, value);
+		return advanced_binary(array, mid + (size % 2 == 0 ? 0 : 1), value);
 	}
 	else
 	{
-		return advanced_binary(array + mid + 1, size - mid - 1, value);
+		int result = advanced_binary(array + mid + 1, size - mid - 1, value);
+		if (result == -1)
+		{
+			return (-1);
+		}
+		else
+		{
+			return (result + mid + 1);
+		}
 	}
 }
