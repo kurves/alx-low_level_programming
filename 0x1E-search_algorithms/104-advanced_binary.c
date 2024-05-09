@@ -37,20 +37,22 @@ int advanced_binary(int *array, size_t size, int value)
 		printf("%d", array[i]);
 	}
 	printf("\n");
-
-        mid = low + (high - low) / 2;
-
-        if (array[mid] == value)
-        {
-            if (mid == 0 || array[mid - 1] != value)
-                return (mid);
-            high = mid;
-        }
-        else if (array[mid] < value)
-            low = mid + 1;
-        else
-            high = mid;
-    }
-
-    return (-1);
+	mid = low + (high - low) / 2;
+	if (array[mid] == value)
+	{
+		if (mid == 0 || array[mid - 1] != value)
+		{
+			return (mid);
+		}
+		high = mid;
+	}
+	else if (array[mid] < value)
+	{
+		low = mid + 1;
+	}
+	else
+	{
+		high = mid;
+	}
+	return (-1);
 }
