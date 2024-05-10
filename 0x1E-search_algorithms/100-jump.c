@@ -8,14 +8,14 @@
  * @size: The number of elements in the array
  * @value: The value to search for
  * Description: search algorithm
- * integer
+ * Return: integert add .
  */
 int jump_search(int *array, size_t size, int value)
 {
 	size_t step;
-        size_t prev;
+	size_t prev;
 	size_t i;
-		
+
 	if (array == NULL || size == 0)
 	{
 		return (-1);
@@ -23,7 +23,6 @@ int jump_search(int *array, size_t size, int value)
 	step = sqrt(size);
 	prev = 0;
 	printf("Value checked array[%lu] = [%d]\n", prev, array[prev]);
-	
 	while (array[prev] < value)
 	{
 		prev += step;
