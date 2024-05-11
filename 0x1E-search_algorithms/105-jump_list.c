@@ -15,20 +15,19 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	listint_t *node;
 
-	node= list;
-	
+	node = list;
 	if (list == NULL || size == 0)
 	{
-		return NULL;
+		return (NULL);
 	}
 	while (node != NULL)
 	{
 		printf("Value checked at index [%lu] = [%d]\n", node->index, node->n);
 		if (node->n == value)
 		{
-			return node;
+			return (node);
 		}
 		node = node->next;
 	}
-	return NULL;
+	return (NULL);
 }
